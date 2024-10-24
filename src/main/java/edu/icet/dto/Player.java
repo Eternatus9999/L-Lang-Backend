@@ -11,14 +11,12 @@ import lombok.ToString;
 @ToString
 
 public class Player {
-    private int id;
+    private long id;
     private String name;
     private String email;
     private String password;
     private String gender;
-//    @Lob
-//    @Column(name = "image", columnDefinition = "LONGBLOB")
-//    private byte[] photo;
+    private byte[] photo;
 
 
 }

@@ -1,5 +1,9 @@
 package edu.icet.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,14 +13,15 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-
+@Entity(name = "Player")
 public class PlayerEntity {
-    private int id;
+    @Id
+    private long id;
     private String name;
     private String email;
     private String password;
     private String gender;
-//    @Lob
-//    @Column(name = "image", columnDefinition = "LONGBLOB")
-//    private byte[] photo;
+    @Lob
+    @Column(name = "image", columnDefinition = "LONGBLOB")
+    private byte[] photo;
 }
