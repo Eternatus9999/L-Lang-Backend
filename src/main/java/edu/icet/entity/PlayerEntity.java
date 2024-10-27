@@ -14,6 +14,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity(name = "Player")
+
 public class PlayerEntity {
     @Id
     private long id;
