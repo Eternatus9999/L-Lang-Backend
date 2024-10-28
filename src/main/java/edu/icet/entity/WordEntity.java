@@ -1,5 +1,6 @@
 package edu.icet.entity;
 
+import edu.icet.dto.QuizWord;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.ToString;
@@ -13,14 +14,10 @@ import java.util.List;
 
 public class WordEntity {
     @Id
-    private long id;
+    private long word_id;
     private String name;
     private String pronunciation;
 
-    @ManyToMany
-    @JoinTable(name = "quiz_word",
-            joinColumns = @JoinColumn(name = "word_id"),
-            inverseJoinColumns = @JoinColumn(name = "quiz_id")
-    )
-    private List<QuizEntity> quizzes= new ArrayList<>();
+    @OneToMany(mappedBy = "word", cascade = CascadeType.ALL)
+    private List<QuizWordEntity> quizWords = new ArrayList<>();
 }

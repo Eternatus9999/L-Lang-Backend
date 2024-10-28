@@ -1,8 +1,7 @@
 package edu.icet.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import edu.icet.dto.QuizWord;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.ToString;
 
@@ -16,11 +15,11 @@ import java.util.List;
 
 public class QuizEntity {
     @Id
-    private long id;
+    private long quiz_id;
     private LocalDate date;
     private String grade;
     private int mark;
 
-    @ManyToMany(mappedBy = "quizzes")
-    private List<WordEntity> word = new ArrayList<>();
+    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL)
+    private List<QuizWordEntity> quizWords = new ArrayList<>();
 }

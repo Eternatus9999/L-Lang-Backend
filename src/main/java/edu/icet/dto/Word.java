@@ -5,15 +5,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 
 public class Word {
-    private long id;
+    private long word_id;
     private String name;
     private String pronunciation;
-
-
+    private List<Quiz> quizzes;
 }
