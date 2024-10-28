@@ -12,7 +12,7 @@ import org.springframework.cglib.core.Local;
 @ToString
 
 public class Quiz {
-    private String id;
+    private long id;
     private Local date;
     private String grade;
     private int mark;

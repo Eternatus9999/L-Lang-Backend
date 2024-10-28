@@ -5,8 +5,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import lombok.Data;
 import lombok.ToString;
-import org.springframework.cglib.core.Local;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,8 +16,8 @@ import java.util.List;
 
 public class QuizEntity {
     @Id
-    private String id;
-    private Local date;
+    private long id;
+    private LocalDate date;
     private String grade;
     private int mark;
 
