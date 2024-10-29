@@ -6,5 +6,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public interface QuizWordService {
-    List<QuizWord> getQuizWord();
+    List<QuizWord> getAll();
+    QuizWord getQuizWord(Long id);
+    String updateQuizWord(QuizWord quizword);
+    void addQuizWord(QuizWord quizWord);
 }
