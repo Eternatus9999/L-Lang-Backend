@@ -18,6 +18,4 @@ public class WordEntity {
     private String name;
     private String pronunciation;
 
-    @OneToMany(mappedBy = "word", cascade = CascadeType.ALL)
-    private List<QuizWordEntity> quizWords = new ArrayList<>();
 }

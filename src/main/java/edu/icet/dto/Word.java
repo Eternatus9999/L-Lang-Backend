@@ -16,5 +16,4 @@ public class Word {
     private long word_id;
     private String name;
     private String pronunciation;
-    private List<Quiz> quizzes;
 }

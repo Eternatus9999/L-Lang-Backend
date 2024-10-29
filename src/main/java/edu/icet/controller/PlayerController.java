@@ -15,31 +15,31 @@ import java.util.List;
 @Slf4j
 public class PlayerController {
     final PlayerService playerservice;
-    @GetMapping("/get-Player-id/{id}")
+    @GetMapping("/get-player-id/{id}")
     public Player getPlayerById(@PathVariable String id){
         return playerservice.getById(Long.parseLong(id));
     }
 
-    @GetMapping("/get-Player-name/{name}")
+    @GetMapping("/get-player-name/{name}")
     public Player getPlayerByName(@PathVariable String name){
         return playerservice.getByName(name);
     }
 
-    @PostMapping("/add-Player")
+    @PostMapping("/add-player")
     public String addPlayer(@RequestBody Player player){
         if(playerservice.add(player)){
             return "Player Added Successfully";
         }
         return "Player didn't Added Successfully";
     }
-    @PutMapping("/update-Player")
+    @PutMapping("/update-player")
     public String updatePlayer(@RequestBody Player player){
         if(playerservice.update(player)){
             return "Player Updated Successfully";
         }
         return "Player didn't Updated Successfully";
     }
-    @DeleteMapping("/delete-Player/{id}")
+    @DeleteMapping("/delete-player/{id}")
     public String deletePlayer(@PathVariable String id){
         if(playerservice.delete(Long.parseLong(id))){
             return "Player Deleted Successfully";

@@ -1,9 +1,6 @@
 package edu.icet.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,14 +16,11 @@ import java.io.Serializable;
 public class QuizWordEntity implements Serializable {
     @Id
     private long id;
-
-    @ManyToOne
-    @JoinColumn(name = "quiz_id")
-    private QuizEntity quiz;
-
-    @ManyToOne
-    @JoinColumn(name = "word_id")
-    private WordEntity word;
-
+    private String question;
+    private String answer;
     private String status;
+
+    @ManyToOne
+    @JoinColumn(name = "quiz_id",referencedColumnName = "quiz_id")
+    private QuizEntity quiz;
 }
