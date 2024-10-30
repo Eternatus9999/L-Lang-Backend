@@ -10,9 +10,9 @@ public interface WordService {
 
     boolean addword(Word word);
 
-    Word getwordbyId (long id);
+    Word getwordbyId (String id);
 
-    Word getwordbyName (String id);
+    Word getwordbyName (String name);
 
     List<Word> getAll();
 }

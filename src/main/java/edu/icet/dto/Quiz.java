@@ -14,11 +14,12 @@ import java.util.List;
 @ToString
 
 public class Quiz {
-    private long quiz_id;
+    private String quiz_id;
+    private String player_id;
     private LocalDate date;
     private String grade;
     private int mark;
-    private List<Word> words;
+    private List<QuizWord> words;
 
 
 }

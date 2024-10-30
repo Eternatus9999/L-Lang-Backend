@@ -14,10 +14,12 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class PlayerController {
+
     final PlayerService playerservice;
+
     @GetMapping("/get-player-id/{id}")
     public Player getPlayerById(@PathVariable String id){
-        return playerservice.getById(Long.parseLong(id));
+        return playerservice.getById(id);
     }
 
     @GetMapping("/get-player-name/{name}")
@@ -41,7 +43,7 @@ public class PlayerController {
     }
     @DeleteMapping("/delete-player/{id}")
     public String deletePlayer(@PathVariable String id){
-        if(playerservice.delete(Long.parseLong(id))){
+        if(playerservice.delete(id)){
             return "Player Deleted Successfully";
         }
         return "Player didn't Deleted Successfully";

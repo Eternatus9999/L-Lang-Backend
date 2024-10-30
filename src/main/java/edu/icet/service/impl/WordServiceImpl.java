@@ -33,7 +33,7 @@ public class WordServiceImpl implements WordService {
         return objectmapper.convertValue(repository.findByName(name), Word.class);
     }
 
-    public Word getwordbyId (long id){
+    public Word getwordbyId (String id){
         return objectmapper.convertValue(repository.findById(id), Word.class);
     }
 

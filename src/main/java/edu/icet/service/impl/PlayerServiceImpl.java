@@ -20,7 +20,7 @@ public class PlayerServiceImpl implements PlayerService {
     final ObjectMapper objectmapper;
 
     @Override
-    public Player getById(long id) {
+    public Player getById(String id) {
         return objectmapper.convertValue(playerrepository.findById(id),Player.class);
     }
 
@@ -42,7 +42,7 @@ public class PlayerServiceImpl implements PlayerService {
     }
 
     @Override
-    public boolean delete(long id) {
+    public boolean delete(String id) {
         playerrepository.deleteById(id);
         return true;
     }

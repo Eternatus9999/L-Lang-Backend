@@ -11,7 +11,7 @@ import lombok.ToString;
 @ToString
 
 public class Player {
-    private long id;
+    private String id;
     private String name;
     private String email;
     private String password;

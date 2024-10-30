@@ -13,14 +13,12 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class QuizWordEntity implements Serializable {
+public class QuizWordEntity{
     @Id
-    private long id;
-    private String question;
-    private String answer;
+    private String word_id;
+    private String name;
+    private String pronunciation;
     private String status;
 
-    @ManyToOne
-    @JoinColumn(name = "quiz_id",referencedColumnName = "quiz_id")
-    private QuizEntity quiz;
 }
+

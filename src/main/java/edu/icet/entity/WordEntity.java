@@ -13,8 +13,9 @@ import java.util.List;
 @Entity(name = "word")
 
 public class WordEntity {
+
     @Id
-    private long word_id;
+    private String word_id;
     private String name;
     private String pronunciation;
 

@@ -1,6 +1,5 @@
 package edu.icet.dto;
 
-import edu.icet.entity.QuizEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,10 +11,11 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class QuizWord implements Serializable {
-    private long id;
-    private String question;
-    private String answer;
+public class QuizWord{
+
+    private String word_id;
+    private String name;
+    private String pronunciation;
     private String status;
-    private QuizEntity quiz;
+
 }
