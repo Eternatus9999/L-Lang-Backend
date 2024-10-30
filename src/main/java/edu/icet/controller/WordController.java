@@ -36,4 +36,11 @@ public class WordController {
     public List<Word> getAll(){
         return service.getAll();
     }
+    @PostMapping("/add-all")
+    public String addAll(@RequestBody List<Word> list){
+        for (Word word : list) {
+            service.addword(word);
+        }
+        return "Words Added Successfully";
+    }
 }
