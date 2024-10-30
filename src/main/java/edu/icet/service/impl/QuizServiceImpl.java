@@ -2,7 +2,6 @@ package edu.icet.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.icet.dto.Quiz;
-import edu.icet.dto.QuizWord;
 import edu.icet.entity.QuizEntity;
 import edu.icet.repository.QuizRepository;
 import edu.icet.service.QuizService;
@@ -40,5 +39,17 @@ public class QuizServiceImpl implements QuizService {
             quizlist.add(objectmapper.convertValue(entity, Quiz.class));
         }
         return quizlist;
+    }
+
+    @Override
+    public boolean updateQuiz(Quiz quiz) {
+        repository.save(objectmapper.convertValue(quiz, QuizEntity.class));
+        return true;
+    }
+
+    @Override
+    public boolean removeQuiz(String id) {
+        repository.delete(repository.getReferenceById(id));
+        return true;
     }
 }

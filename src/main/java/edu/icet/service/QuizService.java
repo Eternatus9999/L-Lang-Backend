@@ -11,5 +11,7 @@ public interface QuizService {
     Quiz getQuiz(String id);
     Quiz createQuiz(Quiz quiz);
     List<Quiz> getAll();
+    boolean updateQuiz(Quiz quiz);
+    boolean removeQuiz(String id);
 
 }

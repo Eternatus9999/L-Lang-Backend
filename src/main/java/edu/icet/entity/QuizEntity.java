@@ -1,7 +1,5 @@
 package edu.icet.entity;
 
-import edu.icet.dto.QuizWord;
-import edu.icet.dto.Word;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.ToString;
