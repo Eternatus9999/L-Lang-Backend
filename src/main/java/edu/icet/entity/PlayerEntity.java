@@ -1,9 +1,6 @@
 package edu.icet.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,12 +14,11 @@ import lombok.ToString;
 
 public class PlayerEntity {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private long id;
     private String name;
     private String email;
     private String password;
     private String gender;
-    @Lob
-    @Column(name = "image", columnDefinition = "LONGBLOB")
-    private byte[] photo;
+    private int marks;
 }

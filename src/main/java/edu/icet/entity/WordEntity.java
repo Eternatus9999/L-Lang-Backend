@@ -15,7 +15,8 @@ import java.util.List;
 public class WordEntity {
 
     @Id
-    private String word_id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private long word_id;
     private String name;
     private String pronunciation;
 

@@ -13,7 +13,7 @@ import java.util.List;
 @ToString
 
 public class Word {
-    private String word_id;
+    private long word_id;
     private String name;
     private String pronunciation;
 }

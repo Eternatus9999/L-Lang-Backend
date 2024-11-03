@@ -13,7 +13,7 @@ import java.io.Serializable;
 @ToString
 public class QuizWord{
 
-    private String word_id;
+    private long word_id;
     private String name;
     private String pronunciation;
     private String status;

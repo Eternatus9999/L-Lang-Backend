@@ -11,12 +11,12 @@ import lombok.ToString;
 @ToString
 
 public class Player {
-    private String id;
+    private long id;
     private String name;
     private String email;
     private String password;
     private String gender;
-    private byte[] photo;
+    private int marks;
 
 
 }

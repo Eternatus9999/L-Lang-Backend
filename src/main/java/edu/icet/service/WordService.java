@@ -10,7 +10,7 @@ public interface WordService {
 
     boolean addword(Word word);
 
-    Word getwordbyId (String id);
+    Word getwordbyId (long id);
 
     Word getwordbyName (String name);
 
