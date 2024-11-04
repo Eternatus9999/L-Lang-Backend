@@ -10,7 +10,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Entity(name = "Player")
+@Entity
+@Table(name = "Player")
 
 public class PlayerEntity {
     @Id

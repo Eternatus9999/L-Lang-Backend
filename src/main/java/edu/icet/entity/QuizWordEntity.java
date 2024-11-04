@@ -6,9 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.io.Serializable;
-
-@Entity(name = "quiz_word")
+@Entity
+@Table(name = "quiz_word")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

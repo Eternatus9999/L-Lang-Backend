@@ -10,7 +10,8 @@ import java.util.List;
 
 @Data
 @ToString
-@Entity(name = "quiz")
+@Entity
+@Table(name = "quiz")
 
 public class QuizEntity {
     @Id

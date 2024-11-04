@@ -8,7 +8,6 @@ import lombok.ToString;
 import java.io.Serializable;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 @ToString
 public class QuizWord{
@@ -18,5 +17,12 @@ public class QuizWord{
     private String name;
     private String pronunciation;
     private String status;
+
+    public QuizWord(long word_id, String name, String pronunciation, String status){
+        this.word_id = word_id;
+        this.name = name;
+        this.pronunciation = pronunciation;
+        this.status = status;
+    }
 
 }
