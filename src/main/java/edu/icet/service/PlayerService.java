@@ -7,7 +7,7 @@ import java.util.List;
 
 @Service
 public interface PlayerService {
-    Player getById(String id);
+    Player getById(long id);
 
     Player getByName(String name);
 
@@ -15,7 +15,7 @@ public interface PlayerService {
 
     boolean update(Player player);
 
-    boolean delete(String id);
+    boolean delete(long id);
 
     List<Player> getAll();
 }

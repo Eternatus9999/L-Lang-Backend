@@ -21,7 +21,7 @@ public class QuizServiceImpl implements QuizService {
     private final ObjectMapper objectmapper;
 
     @Override
-    public Quiz getQuiz(String id) {
+    public Quiz getQuiz(long id) {
         return objectmapper.convertValue(repository.findById(id),Quiz.class);
     }
 
@@ -48,7 +48,7 @@ public class QuizServiceImpl implements QuizService {
     }
 
     @Override
-    public boolean removeQuiz(String id) {
+    public boolean removeQuiz(long id) {
         repository.delete(repository.getReferenceById(id));
         return true;
     }

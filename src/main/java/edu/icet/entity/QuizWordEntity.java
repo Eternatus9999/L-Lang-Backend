@@ -16,6 +16,7 @@ import java.io.Serializable;
 public class QuizWordEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private long id;
     private long quiz_word_id;
     private long word_id;
     private String name;

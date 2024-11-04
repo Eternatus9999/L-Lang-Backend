@@ -8,10 +8,10 @@ import java.util.List;
 @Service
 public interface QuizService {
 
-    Quiz getQuiz(String id);
+    Quiz getQuiz(long id);
     Quiz createQuiz(Quiz quiz);
     List<Quiz> getAll();
     boolean updateQuiz(Quiz quiz);
-    boolean removeQuiz(String id);
+    boolean removeQuiz(long id);
 
 }

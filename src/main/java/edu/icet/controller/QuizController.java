@@ -23,7 +23,7 @@ public class QuizController {
     private final WordService wordservice;
 
     @GetMapping("/view-quiz/{id}")
-    public Quiz getQuiz(@PathVariable String id) {
+    public Quiz getQuiz(@PathVariable long id) {
         return service.getQuiz(id);
     }
 
@@ -55,7 +55,7 @@ public class QuizController {
     }
 
     @DeleteMapping("/delete-quiz/{id}")
-    public boolean deleteQuiz(@PathVariable String id){
+    public boolean deleteQuiz(@PathVariable long id){
         return service.removeQuiz(id);
     }
 

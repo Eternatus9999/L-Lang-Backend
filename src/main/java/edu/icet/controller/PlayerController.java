@@ -18,7 +18,7 @@ public class PlayerController {
     final PlayerService playerservice;
 
     @GetMapping("/get-player-id/{id}")
-    public Player getPlayerById(@PathVariable String id){
+    public Player getPlayerById(@PathVariable long id){
         return playerservice.getById(id);
     }
 
@@ -42,7 +42,7 @@ public class PlayerController {
         return "Player didn't Updated Successfully";
     }
     @DeleteMapping("/delete-player/{id}")
-    public String deletePlayer(@PathVariable String id){
+    public String deletePlayer(@PathVariable long id){
         if(playerservice.delete(id)){
             return "Player Deleted Successfully";
         }
