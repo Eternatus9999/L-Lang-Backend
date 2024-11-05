@@ -44,13 +44,17 @@ public class QuizController {
             list.add(quizword);
         }
         quiz.setWords(list);
-        return service.createQuiz(quiz);
+        return quiz;
 
     }
+    @GetMapping("/get-quiz-by-player/{player_id}")
+    public List<Quiz> filterby(@PathVariable String player_id){
+        return service.filterby(player_id);
+    }
 
-    @PutMapping("/update-quiz")
-    public boolean createQuiz(@RequestBody Quiz quiz){
-        return service.updateQuiz(quiz);
+    @PostMapping("/add-quiz")
+    public Quiz createQuiz(@RequestBody Quiz quiz){
+        return service.createQuiz(quiz);
 
     }
 

@@ -52,4 +52,12 @@ public class QuizServiceImpl implements QuizService {
         repository.delete(repository.getReferenceById(id));
         return true;
     }
+    @Override
+    public List<Quiz> filterby(String player_id){
+        List<Quiz> list = new ArrayList<>();
+        for (QuizEntity entity : repository.findByPlayer(player_id)) {
+            list.add(objectmapper.convertValue(entity,Quiz.class));
+        }
+        return list;
+    }
 }

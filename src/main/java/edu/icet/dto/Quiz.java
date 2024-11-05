@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Quiz {
     private String quiz_id;
-    private String player_id;
+    private String player;
     private LocalDate date;
     private String grade;
     private int mark;

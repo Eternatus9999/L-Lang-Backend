@@ -14,4 +14,5 @@ public interface QuizService {
     boolean updateQuiz(Quiz quiz);
     boolean removeQuiz(long id);
 
+    List<Quiz> filterby(String player_id);
 }
