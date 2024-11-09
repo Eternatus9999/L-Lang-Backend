@@ -49,7 +49,7 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public List<Player> getAll() {
-        List<PlayerEntity> list = playerrepository.findAll();
+        List<PlayerEntity> list = playerrepository.findAllByOrderByMarksDesc();
         List<Player> playerlist = new ArrayList<>();
         for (PlayerEntity entity : list) {
             playerlist.add(objectmapper.convertValue(entity, Player.class));
