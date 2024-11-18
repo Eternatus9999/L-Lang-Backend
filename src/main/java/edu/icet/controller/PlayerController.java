@@ -28,11 +28,8 @@ public class PlayerController {
     }
 
     @PostMapping("/add-player")
-    public String addPlayer(@RequestBody Player player){
-        if(playerservice.add(player)){
-            return "Player Added Successfully";
-        }
-        return "Player didn't Added Successfully";
+    public void addPlayer(@RequestBody Player player){
+        playerservice.add(player);
     }
     @PutMapping("/update-player")
     public String updatePlayer(@RequestBody Player player){
